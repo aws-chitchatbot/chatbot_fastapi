@@ -10,8 +10,8 @@ from models.models import (
     QueryResult,
     QueryWithEmbedding,
 )
-from services.chunks import get_document_chunks
-from services.gemini import get_embeddings
+from services.common.chunks import get_document_chunks
+from services.common.gemini import get_embeddings
 
 
 class DataStore(ABC):

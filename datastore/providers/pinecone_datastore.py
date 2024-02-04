@@ -15,7 +15,7 @@ from models.models import (
     QueryWithEmbedding,
     Source,
 )
-from services.date import to_unix_timestamp
+from services.common.date import to_unix_timestamp
 
 # Pinecone 설정을 위한 환경 변수 읽기
 PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")

@@ -13,7 +13,7 @@ from models.models import (
     QueryResult,
     QueryWithEmbedding,
 )
-from services.date import to_unix_timestamp
+from services.common.date import to_unix_timestamp
 
 ELASTICSEARCH_URL = os.environ.get("ELASTICSEARCH_URL", "http://localhost:9200")
 ELASTICSEARCH_CLOUD_ID = os.environ.get("ELASTICSEARCH_CLOUD_ID")

@@ -5,7 +5,7 @@ from models.models import Document, DocumentChunk, DocumentChunkMetadata
 
 import tiktoken
 
-from services.gemini import get_embeddings
+from services.common.gemini import get_embeddings
 
 # Global variables
 tokenizer = tiktoken.get_encoding(
