@@ -1,5 +1,6 @@
 from datastore.datastore import DataStore
 import os
+import setting.setting
 
 
 async def get_datastore() -> DataStore:
