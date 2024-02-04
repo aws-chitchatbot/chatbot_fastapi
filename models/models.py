@@ -71,3 +71,27 @@ class S3ClientConfig(BaseModel):
     aws_secret_access_key: str
     region_name: str
     bucket_name: str
+
+
+class BedrockClient(BaseModel):
+    """
+
+    매개 변수
+    ----------
+    assumed_role : Optional[str]
+                   default -> None
+    Bedrock 서비스를 호출할 때 가정할 AWS IAM 역할의 선택적 ARN입니다. 지정하지 않으면 현재 활성 자격 증명이 사용된다.
+
+    region : Optional[str]
+                   default -> None
+    서비스를 호출해야 하는 AWS 리전의 이름(예: "us-east-1").
+    지정하지 않으면 AWS_REGION 또는 AWS_DEFAULT_REGION 환경 변수가 사용된다.
+
+    runtime : Optional[bool]
+                   default -> True
+        Amazon Bedrock 서비스에서 작업을 수행할 다른 클라이언트를 가져오는 선택 사항이다.
+    """
+
+    assumed_role: Optional[str] = (None,)
+    region: Optional[str] = (None,)
+    runtime: Optional[bool] = (True,)
