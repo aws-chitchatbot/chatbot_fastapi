@@ -64,3 +64,10 @@ class QueryWithEmbedding(Query):
 class QueryResult(BaseModel):
     query: str
     results: List[DocumentChunkWithScore]
+
+
+class S3ClientConfig(BaseModel):
+    aws_access_key_id: str
+    aws_secret_access_key: str
+    region_name: str
+    bucket_name: str
