@@ -80,16 +80,3 @@ class S3Client:
             print(f"파일 '{s3_key}'이(가) 성공적으로 삭제되었습니다.")
         except Exception as e:
             print(f"파일 삭제 중 오류 발생: {e}")
-
-
-if __name__ == "__main__":
-    # 적절한 S3ClientConfig 객체를 생성하여 S3Client를 초기화합니다.
-
-    config = S3ClientConfig(
-        aws_access_key_id="AKIA3O7OKWCUMI4ZXT5A",
-        aws_secret_access_key="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",
-        region_name="ap-northeast-2",
-        bucket_name="test-yong-buck",
-    )
-
-    s3_client = S3Client(config)
